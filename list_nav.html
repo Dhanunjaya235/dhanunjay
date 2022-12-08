@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Navigation Through Nested Lists</title>
+
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+	<style type="text/css">
+		iframe {
+			width: 100%;
+			height: 700px;
+			border: none;
+		}
+
+		.div1 {
+			background: lightskyblue;
+			font-family: sans-serif;
+			font-size: 20px;
+			display: grid;
+			width: 150px;
+			height: 700px;
+		}
+
+		#bl11,
+		#bl21,
+		#bl31,
+		#bl41,
+		#bl51,
+		#bl61,
+		#bl71,
+		#bl81,
+		#bl91,
+		#bl101 {
+			background: inherit;
+			color: inherit;
+			border: none;
+			outline: none;
+			padding: 20px;
+		}
+
+		#bl11:hover,
+		#bl21:hover,
+		#bl31:hover,
+		#bl41:hover,
+		#bl51:hover,
+		#bl61:hover,
+		#bl71:hover,
+		#bl81:hover,
+		#bl91:hover,
+		#bl101:hover {
+			background: forestgreen;
+			color: white;
+			cursor: pointer;
+		}
+
+		.id {
+			display: inline-block;
+			position: absolute;
+			right: 0px;
+			height: 700px;
+			top: 45px;
+			width: 1360px;
+			text-align: center;
+
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="div1">
+		<button id="bl11">MicroSoft</button>
+		<button id="bl21">KFC</button>
+		<button id="bl31">Youtube</button>
+		<button id="bl51">Zomato</button>
+		<button id="bl41">Swiggy</button>
+		<button id="bl61">Myntra</button>
+		<button id="bl71">IRCTC</button>
+		<button id="bl81">Form</button>
+		<button id="bl91">Image DropDOwn</button>
+		<button id="bl101">MyWeb</button>
+	</div>
+
+	<div class="id" id="app">
+		
+	</div>
+
+
+
+
+	<script type="text/javascript">
+
+		$(document).ready(function () {
+
+			$("#bl11").click(function () {
+				$("#app").empty();
+				$("#app").append("<iframe src=https://support.microsoft.com/en-us></iframe>");
+			});
+			$("#bl21").click(function () {
+				$("#app").empty();
+				$("#app").append("<iframe src=https://online.kfc.co.in/></iframe>");
+			});
+			$("#bl31").click(function () {
+				$("#app").empty();
+				$("#app").append("<iframe src=https://www.youtube.com/embed/videoseries?list=PLu0W_9lII9ahR1blWXxgSlL4y9iQBnLpR title=YouTube video player frameborder=0 allow=accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture allowfullscreen></iframe>");
+			});
+			$("#bl41").click(function () {
+				$("#app").empty();
+				$("#app").append("<iframe src=https://www.swiggy.com/></iframe>");
+			});
+			$("#bl51").click(function () {
+				$("#app").empty();
+				$("#app").append("<iframe src=https://www.zomato.com></iframe>");
+			});
+			$("#bl61").click(function () {
+				$("#app").empty();
+				$("#app").append("<iframe src=https://www.myntra.com/></iframe>");
+			});
+			$("#bl71").click(function () {
+				$("#app").empty();
+				$("#app").append("<iframe src=https://www.irctc.co.in/eticketing/forgotPasswordSuccess.jsf></iframe>");
+			});
+			$("#bl81").click(function () {
+				$("#app").empty();
+				$("#app").load("http://127.0.0.1:5500/3.html");
+			});
+			$("#bl91").click(function () {
+				$("#app").empty();
+				$("#app").load("http://127.0.0.1:5500/Image_Dropdown.html");
+			});
+			$("#bl101").click(function () {
+				$("#app").empty();
+				$("#app").load("http://127.0.0.1:5500/web.html");
+			});
+
+		});
+
+
+	</script>
+</body>
+
+</html>
