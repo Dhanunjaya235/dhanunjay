@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<head>
+	<style type="text/css">
+		h1 {
+			text-align: center;
+			font-family: monospace;
+		}
+		
+		.x {
+			text-align: center;
+			padding: 10px;
+			margin-bottom: 15px;
+			border: 1px solid blueviolet;
+			margin-left: 40%;
+			width: 20%;
+			margin-top: 20px;
+		}
+
+		#jstext {
+			font-size: 100px;
+			text-align: center;
+			margin: 100px;
+		}
+
+		#divform {
+			top: 0;
+
+		}
+		#bd3{
+			background-color: beige;
+			max-height: fit-content;
+		}
+
+
+		ul {
+			list-style-type: none;
+		}
+
+		li {
+
+			padding-top: 0;
+			padding-right: 20px;
+			float: left;
+			margin-left: 45%;
+
+		}
+
+		#b13 {
+			width: 100px;
+			text-align: center;
+			margin-left: 47%;
+			padding: 10px;
+			margin-top: 20px;
+			border-radius: 10%;
+			background-color: magenta;
+		}
+
+		#b13:hover {
+			background-color: blueviolet;
+		}
+
+		span {
+			color: darkred;
+		}
+	</style>
+	<script type="text/javascript">
+		function fun() {
+			var x = document.getElementById('first').value;
+			var y = document.getElementById('last').value;
+			var m = document.getElementById('mobile').value;
+			var l = x.length;
+			var l1 = y.length;
+			if (l == 0) {
+				alert("Enter Name")
+			} else if (l1 == 0) {
+				alert("Enter Last Name")
+			} else if (isNaN(m) || m.toString().length < 10) {
+				alert("Enter Valid MOBILE Number")
+			} else if (document.getElementById("gen").checked == false && document.getElementById("gen1").checked == false) {
+				alert("Select Gender")
+			} else if (document.getElementById('age').value < 18) {
+				alert("you have to be 18 years old to register")
+			} else {
+				var z = confirm("Are you sure to submit");
+				if (z == true) {
+					alert("Done");
+				}
+				else {
+					alert("Cancelled")
+				}
+
+			}
+
+		}
+	</script>
+</head>
+
+<body id="bd3">
+
+	<div id="divform">
+		<h1> Application Form</h1>
+		<form>
+
+			<input type="text" name="first_name" placeholder="First Name" class="x" id="first" required><span>*Mandatory</span><br>
+			<input type="text" name="last_name" placeholder="Last_Name" class="x" id="last" required><br>
+			<input type="mobile" name="Mobile" placeholder="Mobile Number" class="x" id="mobile" required><br>
+			<ul>
+				<li>
+					<input type="radio" name="gender" value="Male" id="gen" required>Male
+					<input type="radio" name="gender" value="Female" id="gen1" required>Female
+				</li>
+			</ul>
+
+			<input type="email" name="mail" class="x" placeholder="E-Mail" id="mail" required>
+
+			<input type="text" name="age" class="x" placeholder="Age" id="age" required><br>
+
+			<button onclick="fun()" required id="b13"> SUBMIT</button>
+
+
+			<p id="jstext"></p>
+	</div>
+</body>
