@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>The jQuery HTML Methods</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+	<style type="text/css">
+		
+
+		.h1{
+			color: darkred;
+		}
+		#d1{
+			background-color: burlywood;
+		}
+		h1{
+			width: 300px;
+			height: 50px;
+			padding: 20px;
+			margin: 30px;
+			border: 2px solid blueviolet;
+		}
+	</style>
+</head>
+<body>
+	
+		<h1>Heading Tag H1</h1>
+		<h2>Heading Tag H2</h2>
+		<h2>Heading Tag H2</h2>
+		<h2>Heading Tag H2</h2>
+		<h3>Heading Tag H3</h3>
+		<h4>Heading Tag H4</h4>
+		<h5>Heading Tag H5</h5>
+		<h6>Heading Tag H6</h6>
+
+
+		<p id="p1">Paragraph Tag</p>
+
+		<div>Division Tag
+
+				<p id="p2">The Paragraph In Division Tag</p>
+
+		</div>
+
+		<button id="b1">Double CLick Me </button>
+
+
+		<button id="b2">CLick TO EMpty Document</button><br><br>
+
+		<button id="b3">Clone</button><br>
+		<button id="b4">Detach</button>
+
+
+		<script type="text/javascript">
+			
+
+				$(document).ready(function(){
+					$("h1").addClass("h1");
+
+					
+
+					$("div").attr("id","d1");
+
+				
+					
+					$("#b2").on("click",function(){
+						$("body").empty();
+					});
+
+
+					$("#b1").on("dblclick",(function(){
+						$("div").removeAttr("id");
+						$("#p2").text(st+"     "+st2+"    "+st3+"      "+st4);
+						if ($("h1").hasClass("h1")) {
+						$("h1").removeClass();
+
+						
+						$("<h1>Replaced H2 WIth H1</h1>").replaceAll("h2");
+						$("h3").replaceWith("Replacewith changes the content in it");
+						
+					};
+					}));
+
+
+					var st=$("h1").outerWidth()+" "+$("h1").outerHeight();
+					var st2=$("h1").innerWidth()+" "+$("h1").innerHeight();
+					var st3=$("h1").width()+" "+$("h1").height();
+					var st4=$("h1").outerWidth(true)+" "+$("h1").outerHeight(true);
+
+					$("#b3").click(function(){
+
+						$("h2").clone().appendTo("body");
+					})
+
+
+					$("#b4").click(function(){
+						$("h2").detach();
+					})
+
+					
+				});
+
+
+		</script>
+
+
+</body>
+</html>

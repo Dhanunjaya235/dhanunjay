@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Trigger Methods</title>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+
+	First Name   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="fn"><br>
+<button id="b0">Trigger</button>
+<button id="b1">Trigger Handler</button>
+
+
+<p></p>
+</body>
+
+<script type="text/javascript">
+	
+
+
+
+	$(document).ready(function(){
+		$("#b0").click(function(event){
+			$("input").trigger("select");
+			$("p").html(event.type+" "+event.timeStamp+" "+event.target+" "+event.namespace+" "+event.result);
+		})
+
+		$("input").select(function(){
+				$("input").after("<b>Triggered</b>")
+		});
+
+		$("#b1").click(function(){
+			$("input").triggerHandler("select");
+			$("p").html(event.type+" "+event.timeStamp+" "+event.target+" "+event.namespace+" "+event.result);
+		})
+	});
+</script>
+</html>
