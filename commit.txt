@@ -2,3 +2,6 @@ hello world
 
 
 changing the text file in order to practice the git commands
+
+using code space to edit the text file and see how it goes from here on to know about the codespace functionality and how can we use the 
+space efficiently for the betterment of out project and coding environment.
