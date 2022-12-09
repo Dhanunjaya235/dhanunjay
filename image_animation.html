@@ -1,0 +1,47 @@
+<!doctype html>
+
+<head>
+	
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<style type="text/css">
+		
+		p{
+			text-align: center;
+			background: deepskyblue;
+			color: white;
+		}
+		img{
+			widows: 300px;
+			height: 300px;
+			margin-left: 40%;
+		}
+		#bt{
+			margin-left: 47%;
+			background: crimson;
+			color: white;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<p>Hover The Mouse On The Image TO see Animation</p>
+
+<button id="bt">Click Me</button><br>
+<img src="https://play-lh.googleusercontent.com/-_BXK4eGQ3p2hf2_pGGqI_m-OIAnUdsnmRpKOMcY1VplvYwOaPQyF7O-3u8w1Es2Nm4"  >
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#bt").click(function(){
+			$("img").animate({
+				width:'100px',
+				height:'500px',
+				opacity:'0.5',
+				right:'10%'
+			});
+		});
+	});
+</script>
+
+</body>
